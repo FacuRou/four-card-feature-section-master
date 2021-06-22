@@ -1,0 +1,140 @@
+:root {
+    --Red: hsl(0, 78%, 62%);
+    --Cyan: hsl(180, 62%, 55%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+    --Very-Dark-Blue: hsl(234, 12%, 34%);
+    --Grayish-Blue: hsl(229, 6%, 66%);
+    --Very-Light-Gray: hsl(0, 0%, 98%);
+    --Box-shadow: hsl(0,0%,80%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--Very-Light-Gray);
+    font-family: 'Poppins', sans-serif;
+    color: var(--Grayish-Blue);
+}
+
+.container {
+    width: 1140px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.header {
+    width: 80%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.title {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--Very-Dark-Blue);
+    margin-bottom: 15px;
+}
+
+.title span {
+    display: block;
+    font-weight: 200;
+}
+
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 310px;
+    height: 220px;
+    padding: 30px;
+    margin-bottom: 24px;
+    border-radius: 10px;
+    box-shadow: 0 4px 25px var(--Box-shadow);
+    background: hsl(0, 0%, 100%);
+}
+
+.card:nth-of-type(1) {
+    border-top: 4px solid var(--Cyan);
+}
+
+.card:nth-of-type(2) {
+    border-top: 4px solid var(--Red);
+}
+
+.card:nth-of-type(3) {
+    border-top: 4px solid var(--Orange);
+}
+
+.card:nth-of-type(4) {
+    border-top: 4px solid var(--Blue);
+}
+
+.title-card {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--Very-Dark-Blue);
+    margin-bottom: 12px;
+}
+
+.paragraph {
+    font-size: .9rem;
+}
+
+.img-card {
+    width: 60px;
+    align-self: flex-end;
+    line-height: 0;
+}
+
+.attribution { 
+    margin-bottom: 80px;
+    font-size: 11px; 
+    text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+@media screen and (min-width: 768px) {
+    .cards {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    .card {
+        width: 350px;
+        height: 240px;
+    }
+
+}
+
+@media screen and (min-width: 1050px) {
+    .cards {
+        align-items: center;
+    }
+   
+    .card:nth-last-of-type(1), .card:nth-last-of-type(4) {
+        transform: translateY(50%);
+    } 
+
+    .card:nth-of-type(3) {
+        order: 1;
+    }
+
+}
